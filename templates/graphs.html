@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ model_name }} Plots</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='graphs.css') }}">
+</head>
+<body>
+    <h2>Plots for {{ model_name }}</h2>
+
+    <div class="plot-container">
+        <h3>Forecast Plot</h3>
+        <img src="{{ forecast_plot }}" alt="Forecast Plot">
+    </div>
+
+    <div class="plot-container">
+        <h3>Components Plot</h3>
+        <img src="{{ components_plot }}" alt="Components Plot">
+    </div>
+
+    <div class="btn-container">
+        <button><a href="/" class="btn">Upload Another File</a></button>
+    </div>
+</body>
+</html>

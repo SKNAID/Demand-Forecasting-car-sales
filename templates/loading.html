@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loading...</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='loading.css') }}">
+    <script>
+        window.onload = function() {
+            setTimeout(function() {
+                window.location.href = "{{ url_for('process_file', filename=filename) }}";
+            }, 2000); // Delay of 2 seconds
+        };
+    </script>
+</head>
+<body>
+    <div class="loader-container">
+        <div class="loader"></div>
+        <p>Loading, please wait...</p>
+    </div>
+</body>
+</html>

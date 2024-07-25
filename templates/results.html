@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prediction Results</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='results.css') }}">
+</head>
+<body>
+    <div class="video-container">
+        <video autoplay loop muted playsinline>
+            <source src="{{ url_for('static', filename='background_video.mp4') }}" type="video/mp4">
+            Your browser does not support HTML5 video.
+        </video>
+    </div>
+
+    <h2>Prediction Results</h2>
+    <div class="results-container">
+        {% for model, data in results.items() %}
+            <div class="model-container">
+                <h3><a href="{{ url_for('show_graphs', model_name=model) }}">{{ model }}</a></h3>
+                <p>Accuracy: {{ data['accuracy'] }}%</p>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Date</th>
+                            <th>Expected Sales</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for row in data['predictions'].itertuples(index=False) %}
+                            <tr>
+                                <td>{{ row.ds.strftime('%Y-%m') }}</td>
+                                <td>{{ row.yhat }}</td>
+                            </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+        {% endfor %}
+    </div>
+    <div>
+        <button><a href="/" class="btn">Upload Another File</a></button>
+    </div>
+</body>
+</html>

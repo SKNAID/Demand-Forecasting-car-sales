@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Upload CSV</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='main.css') }}">
+</head>
+<body>
+    <div class="video-container">
+        <video autoplay loop muted>
+            <source src="{{ url_for('static', filename='background_video.mp4') }}" type="video/mp4">
+            Your browser does not support HTML5 video.
+        </video>
+    </div>
+
+    <!-- Sliding Boxes -->
+    <div class="slider">
+        <div class="box">
+            <h3>About the Project</h3>
+            <p>This project aims to predict monthly car sales using advanced machine learning models.</p>
+        </div>
+        <div class="box">
+            <h3>Data Analysis</h3>
+            <p>Analyze historical sales data to uncover trends and patterns that can help improve sales forecasting.</p>
+        </div>
+        <div class="box">
+            <h3>Machine Learning</h3>
+            <p>Utilize state-of-the-art algorithms like Prophet to make accurate sales predictions.</p>
+        </div>
+    </div>
+
+    <!-- Upload Form -->
+    <div class="upload-container">
+        <h2>Upload CSV</h2>
+        <form action="{{ url_for('upload_file') }}" method="post" enctype="multipart/form-data">
+            <label class="custom-file-upload">
+                <input type="file" name="file" accept=".csv">
+                Choose File
+            </label>
+            <button type="submit">Upload</button>
+        </form>
+    </div>
+</body>
+</html>
