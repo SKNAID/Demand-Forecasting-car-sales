@@ -13,7 +13,7 @@ This project is a machine learning model that predicts monthly car sales using F
 - [Modeling](#modeling)
 - [Results](#results)
 - [Contributing](#contributing)
-- [Demo Video](#demo-video)https://vimeo.com/991406926?share=copy
+- [Demo Video](#demo-video) https://vimeo.com/991406926?share=copy
 - [Acknowledgements](#acknowledgements)
 
 ## Project Overview
@@ -96,7 +96,7 @@ The results show improved forecasting accuracy for most car brands, with a signi
 Contributions are welcome! Please fork the repository and create a pull request with your changes.
 
 ## DEMO VIDEO
-Watch a demo of the project in action here: Demo Video
+Watch a demo of the project in action here: Demo Video https://vimeo.com/991406926?share=copy
 
 ## Acknowledgements
 
