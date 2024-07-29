@@ -13,7 +13,7 @@ This project is a machine learning model that predicts monthly car sales using F
 - [Modeling](#modeling)
 - [Results](#results)
 - [Contributing](#contributing)
-- [License](#license)
+- [Demo Video](#demovideo)
 - [Acknowledgements](#acknowledgements)
 
 ## Project Overview
@@ -95,9 +95,9 @@ The results show improved forecasting accuracy for most car brands, with a signi
 
 Contributions are welcome! Please fork the repository and create a pull request with your changes.
 
-## License
-
-This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for more details.
+## DEMO VIDEO
+Check out this video demonstration of the project to see how it works in action:
+https://vimeo.com/991406926?share=copy
 
 ## Acknowledgements
 
